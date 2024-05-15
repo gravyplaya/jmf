@@ -13,7 +13,7 @@ services:
     - key: database__connection__host
       fromService:
         type: pserv
-        name: mysql
+        name: mysql_jmf
         property: host
     - key: database__connection__database
       value: ghostdb
@@ -22,17 +22,17 @@ services:
     - key: database__connection__password
       fromService:
         type: pserv
-        name: mysql
+        name: mysql_jmf
         envVarKey: MYSQL_PASSWORD
 
 - type: pserv
-  name: mysql
+  name: mysql_jmf
   plan: standard
   env: docker
   repo: https://github.com/render-examples/mysql
   autoDeploy: false
   disk:
-    name: mysql
+    name: mysql_jmf
     mountPath: /var/lib/mysql
     sizeGB: 10
   envVars:
