@@ -1,10 +1,10 @@
 services:
 - type: web
-  name: ghost
+  name: justmyfans
   env: docker
   autoDeploy: false
   disk:
-    name: ghost
+    name: justmyfans
     mountPath: /var/lib/ghost/content
     sizeGB: 10 #Feel free to change this to suit your needs.
   envVars:
